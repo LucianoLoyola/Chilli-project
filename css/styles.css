@@ -4,6 +4,7 @@
     --color-accent: #C3073F;
     --color-headings: #918ca4;
     --color-bodytext: #4E4E50;
+    --color-background: #1A1A1D;
 }
 
 /*   -------------- Typography --------------         */
@@ -143,3 +144,25 @@ a{
         padding-left: 0;
     }    
 }
+
+/*   -------------- Icons --------------         */
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary{ /*fill is only available in svg files*/
+    fill: var(--color-primary)
+}
+/*span is an inline elements. width and height doesn't have effect in inline*/
+
+.icon-container{
+    background-color: var(--color-headings);
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex; /*We use flex to position the icon in the container*/
+    justify-content: center;
+    align-items: center;
+}
+
