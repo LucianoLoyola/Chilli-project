@@ -27,6 +27,7 @@ body{
     line-height: 2rem;
 }
 
+
 h1,h2,h3{
     color:var(--color-headings);
     margin-bottom: 2rem;
@@ -534,15 +535,11 @@ a{
     justify-content: space-between; /*This puts the elements in the container to the edges of it and adds space between them*/
 }
 
-.collapsible .btn{
-
-}
-
 .collapsible__heading{
     margin-top: 0;
     font-size: 3rem;
 }
-
+/*We use animation in order to make it more natural.*/
 .collapsible__chevron{
     transform: rotate(-90deg);
     transition: transform 0.3s;
@@ -554,7 +551,7 @@ a{
     opacity: 0;
     transition: all 0.3s;
 }
-
+/*These are the rules that define when the components collpasible__chevron and collapsible__content are expanded. A .js file is attached to this funtionality.*/
 .collapsible--expanded .collapsible__chevron{
     transform: rotate(0);
 }
@@ -562,4 +559,39 @@ a{
     display: block;
     max-height: 100vh;/*It stretches to max of its content. MAX height*/
     opacity: 1;
+}
+
+/*   -------------- Blocks --------------         */
+.block{
+    --padding-vertical: 6rem; /*WE define a variable in order to reuse it in the skewed blocks*/
+    padding: var(--padding-vertical) 2rem;
+    border: 2px solid red;
+
+}
+.block__header{
+    text-align: center;
+}
+
+.block__heading{
+    margin-top: 0;
+}
+.block--dark{
+    background: #000;
+    color: var(--color-bodytext);
+}
+.block--dark .block__heading{
+    color:white;
+}
+.block--skewed-right{
+    padding-bottom: calc(var(--padding-vertical) + 4rem);/*In order to mantain simmetry, we must add some extra padding*/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.block--skewed-left{
+    padding-bottom: calc(var(--padding-vertical) + 4rem);/*In order to mantain simmetry, we must add some extra padding*/
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.container{
+    max-width: 1140px; /*We set a maximum width of the container of the block element*/
+    margin: 0 auto;/*equally distributes the horizontal margin*/
 }

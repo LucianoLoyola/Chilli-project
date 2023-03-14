@@ -14,21 +14,25 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
-  <!--To add the icon, we must use absoluto position. In order to do that, we must make the image to be relatively positioned and the icon to be absolute positioned-->
   <body>
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header">
-        <h2 class="collapsible__heading">Item 1</h2>
-        <svg class="icon icon--primary collapsible__chevron">
-          <use xlink:href="images/chevron.svg#chevron"></use>
-        </svg>
+    <!--Block element aligned to the left. Ocuppies the whole width-->
+    <section class="block container">
+      <header class="block__header">
+        <h2 class="block__heading">Heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, et.
+        </p>
       </header>
-      <div class="collapsible__content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-        atque dolorem, rerum fugiat corporis modi eveniet aliquam optio eaque
-        totam.
+    </section>
+    <!--Block element aligned to the center. Doesn't ocuppies the whole width-->
+    <section class="block block--dark block--skewed-left">
+      <div class="container">
+        <h2 class="block__heading">Heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, et.
+        </p>
       </div>
-    </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>
