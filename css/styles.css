@@ -160,9 +160,19 @@ a{
     height: 40px;
 }
 
+.icon--small{
+    width: 30px;
+    height: 30px;
+}
+
 .icon--primary{ /*fill is only available in svg files*/
     fill: var(--color-primary)
 }
+
+.icon--white{ /*fill is only available in svg files*/
+    fill: white;
+}
+
 /*span is an inline elements. width and height doesn't have effect in inline*/
 
 .icon-container{
@@ -173,6 +183,10 @@ a{
     display: inline-flex; /*We use flex to position the icon in the container*/
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent{
+    background: var(--color-accent);
 }
 
 /*   -------------- Buttons --------------         */
@@ -434,4 +448,36 @@ a{
     .grid--1x3{
         grid-template-columns: repeat(3,1fr);
     }
+}
+
+/*   -------------- Testimonial --------------         */
+.testimonial{
+    padding: 3rem;
+}
+
+.testimonial__image{
+    position: relative;
+}
+
+/*Direct child selector. With "> img" we are targeting the image inside the class*/
+.testimonial__image > img{/*This makes the image to occupy the whole container. In this case, the grid.*/
+    /*So it will be able to resize when the screen changes.*/
+    width:100%;
+}
+
+.testimonial__image > .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px; /*We move the icon to half of its width in order to make it be at the middle of the image's border.*/
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote, .testimonial .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote{
+        margin-left: 6rem;
+    }
+    
 }
