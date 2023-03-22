@@ -15,19 +15,32 @@
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
-    <section class="block--dark block--skewed-left">
-      <div class="container--max">
-        <div class="grid grid--1x2">
-          <header class="block__header hero__content">
-            <h1 class="block__heading">Chillis</h1>
-            <p class="hero__tagline">
-              Obtain your chillis in less than 2 days.
-            </p>
-            <a href="" class="btn btn--accent btn--stretched">Get Started</a>
-          </header>
-          <img class="hero__image" src="images/chili.png" alt="" />
-        </div>
+    <section class="block container block-domain">
+      <header class="block__header">
+        <h2>Starting at $9 per month</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam beatae
+          officiis dolorum nemo quidem deleniti exercitationem iure voluptatum
+          animi debitis.
+        </p>
+      </header>
+      <div class="input-group">
+        <input type="text" class="input" placeholder="Enter your text here" />
+        <button class="btn btn--accent">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          Search here
+        </button>
       </div>
+      <ul class="list block-domain__prices">
+        <li><span class="badge badge--secondary">2 chillis $3</span></li>
+        <li>5 chillis $5</li>
+        <li>10 chillis $10</li>
+        <li>20 chillis $15</li>
+        <li>50 chillis $30</li>
+        <li>100 chillis $55</li>
+      </ul>
     </section>
     <script src="js/main.js"></script>
   </body>

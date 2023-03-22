@@ -182,7 +182,7 @@ a{
 
 /*span is an inline elements. width and height doesn't have effect in inline*/
 
-.icon-container{
+.icon-block{
     background-color: var(--color-headings);
     width: 64px;
     height: 64px;
@@ -208,6 +208,14 @@ a{
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
+    outline: 0;
+}
+
+.btn .icon{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 .btn--primary{
     background-color: #950740;
@@ -285,7 +293,7 @@ a{
 .input-group .input{ /*The input inside the input-group shouldn't have a border*/
     border:0;
     flex-grow: 1;
-    padding-left: 1.5rem;
+    padding-left: 1.5rem 2rem;
 }
 
 .input-group .btn{
@@ -571,7 +579,6 @@ a{
 .block{
     --padding-vertical: 6rem; /*WE define a variable in order to reuse it in the skewed blocks*/
     padding: var(--padding-vertical) 2rem;
-    border: 2px solid red;
 
 }
 .block__header{
@@ -605,6 +612,7 @@ a{
     max-width: 100%; /*We set a maximum width of the container of the block element*/
     margin: 0 auto;/*equally distributes the horizontal margin*/
 }
+
 
 
 /*   -------------- Navigation bar --------------         */
@@ -691,4 +699,29 @@ a{
         padding-left: 2rem;
     }
 
+}
+
+/*              Domain Block                */
+
+.block-domain__prices{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.block-domain .input-group{
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+@media screen and (min-width: 768px){
+    .block-domain__prices{
+        grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
+    }
 }
