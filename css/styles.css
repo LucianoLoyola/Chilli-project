@@ -16,6 +16,10 @@
 
 
 /*   -------------- Typography --------------         */
+::selection{
+    background: var(--color-accent);
+}
+
 html{
     font-size: 62.5%; /*Of 16px = 10px*/
 }
@@ -44,6 +48,7 @@ h2{
 
 h3{
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p{
@@ -132,7 +137,6 @@ a{
 .list{
     list-style: none; /*removes the dot added to the list*/
     padding-left: 0;
-    color: var(--color-headings);
 }
 /*Horizontal and vertical lists*/
 .list--inline .list__item{
@@ -143,6 +147,7 @@ a{
 .list--tick{
     list-style-image: url(../images/tick.svg);
     padding-left:3rem;
+    color: var(--color-headings);
 }
 
 .list--tick .list__item{
@@ -414,6 +419,7 @@ a{
 
 .media{
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__title{
@@ -608,16 +614,18 @@ a{
     background: #000;
     color: var(--color-bodytext);
 }
-.block--dark .block__heading{
+.block--dark h1,
+.block--dark h2,
+.block--dark h3{
     color:white;
 }
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical) + 4rem);/*In order to mantain simmetry, we must add some extra padding*/
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);/*In order to mantain simmetry, we must add some extra padding*/
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .container{
@@ -777,3 +785,24 @@ a{
     }
 }
 
+/*  Showcase Block */
+.block-showcase__image > img{
+    width:100%;
+}
+
+.media__body p{
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 768px) {
+    .block-showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image{
+        justify-self: end;
+    }
+    .block-showcase__image > img{
+        width: auto;
+        max-width: 700px;
+    }
+}
