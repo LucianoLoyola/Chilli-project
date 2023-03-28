@@ -15,63 +15,367 @@
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
-    <footer class="block block--dark footer">
-      <div class="container grid footer__section">
-        <section class="collapsible collapsible--expanded footer__section">
-          <header class="collapsible__header">
-            <h2 class="collapsible__heading footer__heading">Products</h2>
-            <svg class="icon icon--primary collapsible__chevron">
-              <use xlink:href="images/chevron.svg#chevron"></use>
-            </svg>
-          </header>
-          <div class="collapsible__content">
-            <ul class="list">
-              <li><a href="#">Basis suscription</a></li>
-              <li><a href="#">Medium suscription</a></li>
-              <li><a href="#">Ultra hot suscription</a></li>
-            </ul>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"
+          ><img src="images/wchili.png" alt="A logo"
+        /></a>
+        <svg class="icon icon--big icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Hosting</a></li>
+          <li class="nav__item"><a href="#">VPS</a></li>
+          <li class="nav__item"><a href="#">Domain</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+      <section class="block--dark block--skewed-left">
+        <div class="container--max">
+          <div class="grid grid--1x2">
+            <header class="block__header hero__content">
+              <h1 class="block__heading">Chillis</h1>
+              <p class="hero__tagline">
+                Obtain your chillis in less than 2 days.
+              </p>
+              <a href="" class="btn btn--accent btn--stretched">Get Started</a>
+            </header>
+            <img class="hero__image" src="images/chili.png" alt="" />
           </div>
-        </section>
-        <section class="collapsible collapsible footer__section">
-          <header class="collapsible__header">
-            <h2 class="collapsible__heading footer__heading">Information</h2>
-            <svg class="icon icon--primary collapsible__chevron">
-              <use xlink:href="images/chevron.svg#chevron"></use>
+        </div>
+      </section>
+      <section class="block container block-domain">
+        <header class="block__header">
+          <h2>Starting at $9 per month</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+            beatae officiis dolorum nemo quidem deleniti exercitationem iure
+            voluptatum animi debitis.
+          </p>
+        </header>
+        <div class="input-group">
+          <input type="text" class="input" placeholder="Enter your text here" />
+          <button class="btn btn--accent">
+            <svg class="icon icon--white">
+              <use xlink:href="images/sprite.svg#search"></use>
             </svg>
-          </header>
-          <div class="collapsible__content">
-            <ul class="list">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Affiliates</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+            Search here
+          </button>
+        </div>
+        <ul class="list block-domain__prices">
+          <li><span class="badge badge--secondary">2 chillis $3</span></li>
+          <li><span class="badge badge--secondary">5 chillis $5</span></li>
+          <li><span class="badge badge--secondary">10 chillis $10</span></li>
+          <li><span class="badge badge--secondary">20 chillis $15</span></li>
+          <li><span class="badge badge--secondary">50 chillis $30</span></li>
+          <li><span class="badge badge--secondary">100 chillis $55</span></li>
+        </ul>
+      </section>
+      <section class="block container block-plans">
+        <div class="grid grid--1x3">
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--secondary badge--small">10% OFF</span>
+                <span class="plan__description">East start on the cloud</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Sotrage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outline btn--block">Buy Now</button>
+              </div>
+            </div>
           </div>
-        </section>
-        <section class="collapsible collapsible footer__section">
-          <header class="collapsible__header">
-            <h2 class="collapsible__heading footer__heading">Support</h2>
-            <svg class="icon icon--primary collapsible__chevron">
-              <use xlink:href="images/chevron.svg#chevron"></use>
-            </svg>
-          </header>
-          <div class="collapsible__content">
-            <ul class="list">
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Knowledge Base</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
+          <div class="plan plan--popular">
+            <div class="card card--primary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--primary badge--small">10% OFF</span>
+                <span class="plan__description">East start on the cloud</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Sotrage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outline btn--block">Buy Now</button>
+              </div>
+            </div>
           </div>
-        </section>
-
-        <section class="footer__brand">
-          <section class="footer__brand--text">
-            <img src="images/github.png" alt="" />
-            <h2>Luciano Loyola</h2>
-          </section>
-          <p class="footer_copyright">Copyright 2023 Luciano Loyola</p>
-        </section>
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--secondary badge--small">10% OFF</span>
+                <span class="plan__description">East start on the cloud</span>
+              </header><section class="block container block-plans">
+        <div class="grid grid--1x3">
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--secondary badge--small">10% OFF</span>
+                <span class="plan__description">East start on the cloud</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Sotrage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outline btn--block">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="plan plan--popular">
+            <div class="card card--primary">
+              <header class="card__header">
+                <h3 class="plan__name">Entry</h3>
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--primary badge--small">10% OFF</span>
+                <span class="plan__description">East start on the cloud</span>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Sotrage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outline btn--block">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="plan">
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Sotrage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outline btn--block">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="block container">
+        <header class="header__block">
+          <h2>Receive premium quality chilis for a cheap price</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut.</p>
+        </header>
+        <article class="grid grid--1x2 feature">
+          <div class="feature__content">
+            <span class="icon-container">
+              <svg class="icon icon--primary">
+                <use xlink:href="images/sprite.svg#easy"></use>
+              </svg>
+            </span>
+            <h3 class="feature__heading">Super easy to subscribe</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              corporis.
+            </p>
+            <a href="" class="link-arrow">Learn more</a>
+          </div>
+          <picture class="feature__picture"
+            ><img src="images/chilihand.png" alt=""
+          /></picture>
+        </article>
+      </section>
+      <section class="block container">
+        <article class="grid grid--1x2 feature">
+          <div class="feature__content">
+            <span class="icon-container">
+              <img style="fill: #950740;" class="icon icon--primary" src="images/spicychili.png"> </img>
+            </span>
+            <h3 class="feature__heading">Super spicy to enjoy</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              corporis.
+            </p>
+            <a href="" class="link-arrow">Learn more</a>
+          </div>
+          <picture class="feature__picture"
+            ><img src="images/chilihand.png" alt=""
+          /></picture>
+        </article>
+      </section>
+      <section class="block block--dark block--skewed-right block-showcase">
+        <header class="block__header">
+          <h2>User friendly control panel</h2>
+        </header>
+        <div class="container grid grid--1x2">
+          <picture class="block-showcase__image">
+            <img src="images/photochili.jpg" alt="" />
+          </picture>
+          <ul class="list">
+            <li>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#snap"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Easy start & Manage updates</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                    alias?
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#snap"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Easy start & Manage updates</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                    alias?
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="block">
+        <header class="block__header">
+          <h2>What our customers are saying</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, earum!</p>
+        </header>
+        <div class="container">
+          <div class="card testimonial">
+            <div class="grid grid--1x2">
+              <div class="testimonial__image">
+                <img
+                  src="images/testimonial.jpg"
+                  alt="A happy customer."
+                /><!--We must make this image resposive-->
+                <span class="icon-container icon-container--accent">
+                  <svg class="icon icon--white icon--small">
+                    <use xlink:href="images/sprite.svg#quotes"></use>
+                  </svg>
+                </span>
+              </div>
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+                  temporibus?
+                </p>
+                <!--A footer is not necesarily the footer of the page. It can be the footer of a section of the code.-->
+                <footer>
+                  <div class="media">
+                    <div class="media__image">
+                      <svg class="icon icon--primary quote__line">
+                        <use xlink:href="images/sprite.svg#line"></use>
+                      </svg>
+                    </div>
+                    <div class="media__body">
+                      <h3 class="media__title quote__author">Roberte Riquelme</h3>
+                      <p class="quote__organization">Fuchibol Company</p>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="callout callout--primary">
+        <div class="grid grid--1x2">
+          <div class="callout__content">
+            <h2 class="callout__heading">Ready to get started</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, sit!
+            </p>
+          </div>
+          <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+        </div>
       </div>
-    </footer>
+      <footer class="block block--dark footer">
+        <div class="container grid footer__section">
+          <section class="collapsible collapsible--expanded footer__section">
+            <header class="collapsible__header">
+              <h2 class="collapsible__heading footer__heading">Products</h2>
+              <svg class="icon icon--primary collapsible__chevron">
+                <use xlink:href="images/chevron.svg#chevron"></use>
+              </svg>
+            </header>
+            <div class="collapsible__content">
+              <ul class="list">
+                <li><a href="#">Basis suscription</a></li>
+                <li><a href="#">Medium suscription</a></li>
+                <li><a href="#">Ultra hot suscription</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="collapsible collapsible footer__section">
+            <header class="collapsible__header">
+              <h2 class="collapsible__heading footer__heading">Information</h2>
+              <svg class="icon icon--primary collapsible__chevron">
+                <use xlink:href="images/chevron.svg#chevron"></use>
+              </svg>
+            </header>
+            <div class="collapsible__content">
+              <ul class="list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="collapsible collapsible footer__section">
+            <header class="collapsible__header">
+              <h2 class="collapsible__heading footer__heading">Support</h2>
+              <svg class="icon icon--primary collapsible__chevron">
+                <use xlink:href="images/chevron.svg#chevron"></use>
+              </svg>
+            </header>
+            <div class="collapsible__content">
+              <ul class="list">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Knowledge Base</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </section>
+      
+          <section class="footer__brand">
+            <section class="footer__brand--text">
+              <img src="images/github.png" alt="" />
+              <h2>Luciano Loyola</h2>
+            </section>
+            <p class="footer_copyright">Copyright 2023 Luciano Loyola</p>
+          </section>
+        </div>
+      </footer>
+      
+    </header>
     <script src="js/main.js"></script>
   </body>
 </html>
