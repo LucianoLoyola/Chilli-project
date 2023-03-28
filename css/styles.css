@@ -690,6 +690,7 @@ a{
         max-height: 100%;/*This is to make the nav bar to be visible by default in wider screens*/
         opacity: 1;/*Idem*/
         font-weight: 700;
+
     }
 
     .nav__items{
